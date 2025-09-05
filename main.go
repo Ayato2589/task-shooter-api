@@ -11,7 +11,7 @@ func main() {
 	e := echo.New()
 
 	e.Use(middleware.CORSWithConfig(middleware.CORSConfig{
-		AllowOrigins: []string{"https://task-shooter.vercel.app"},
+		AllowOrigins: []string{"https://task-shooter.vercel.app", "http://localhost:5173"},
 		AllowMethods: []string{http.MethodGet, http.MethodPost, http.MethodOptions},
 	}))
 
