@@ -19,5 +19,9 @@ func main() {
 		return c.String(http.StatusOK, "hello task-shooter")
 	})
 
+	e.GET("/healthz", func(c echo.Context) error {
+		return c.String(http.StatusOK, "ok")
+	})
+
 	e.Logger.Fatal(e.Start(":8080"))
 }
